@@ -10,10 +10,8 @@ public class Main {
         for (int[] results: STUDENTS_MARKS){
             studentIndex++;
 
-            StudentResults studentResults = new StudentResults(results);
-
-            double studentAverage = studentResults.getAverage(results);
-            System.out.println("student " + studentIndex + ": Average: " + studentAverage + " | RESULT: " + (studentResults.passOrFail(studentAverage) ? "pass" : "fail"));
+            double studentAverage = StudentResults.getAverage(results);
+            System.out.println("student " + studentIndex + ": Average: " + studentAverage + " | RESULT: " + (StudentResults.passOrFail(studentAverage) ? "pass" : "fail"));
         }
     }
 }

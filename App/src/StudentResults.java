@@ -1,22 +1,17 @@
 public class StudentResults {
-    private int[] results;
-    private int MINIMUM_AVERAGE = 60;
+    private static int MINIMUM_AVERAGE = 60;
 
-    public StudentResults(int[] results) {
-        this.results = results;
-    }
-
-    public void printResults(){
+    public void printResults(int[] results){
         for (int result: results){
             System.out.print(result + " - ");
         }
     }
 
-    public boolean passOrFail(double average){
+    public static boolean passOrFail(double average){
         return average >= MINIMUM_AVERAGE ? true : false;
     }
 
-    public double getAverage(int[] results){
+    public static double getAverage(int[] results){
         int sum = 0;
         for (int result: results){
             sum += result;
